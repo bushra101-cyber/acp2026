@@ -17,8 +17,7 @@ int find(int n, float arr[n]) // finding max value and index
 }
 void output(float arr[], int max_index) // displaying result
 {
-    printf("Maximum value = %.2f\n", arr[max_index]);
-    printf("Maximum index value =%d\n", max_index);
+    printf("max value = %.2f, index= %d\n", arr[max_index], max_index);
 }
 int main()
 {
