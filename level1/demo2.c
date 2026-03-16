@@ -23,9 +23,7 @@ float calculate(Rectangle rect)
 }
 void compare(Rectangle r1, Rectangle r2, Rectangle r3)
 {
-    printf("\nArea of %s = %.2f\n", r1.name, r1.area);
-    printf("Area of %s = %.2f\n", r2.name, r2.area);
-    printf("Area of %s = %.2f\n", r3.name, r3.area);
+    printf("\nArea of %s, %s, %s = %.2f, %.2f, %.2f\n", r1.name, r2.name, r3.name, r1.area, r2.area, r3.area);
 
     if (r1.area > r2.area && r1.area > r3.area)
     {

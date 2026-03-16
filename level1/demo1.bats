@@ -12,7 +12,7 @@ EOF
   # Check that the line is exactly what we expect
   [[ "$result_line" == "max value = 27.00, index= 3" ]]
 }
-@test "simple test"{
+@test "simple test" {
     run ./demo1 <<EOF
 3
 1 -2 -9.2
