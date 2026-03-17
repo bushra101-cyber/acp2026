@@ -1,36 +1,25 @@
 #!/usr/bin/env bats
 
-@test "simple test" {
-  run ./demo1 <<EOF
-5
-3 5 0 27 1
-EOF
+@test "max value in middle" {
+    run bash -c "printf '5\n1\n2\n26\n4\n5\n' | ./demo1"
 
-  # Extract the line containing 'max value'
-  result_line=$(echo "$output" | grep "max value")
-  
-  # Check that the line is exactly what we expect
-  [[ "$result_line" == "max value = 27.00, index= 3" ]]
+    echo "$output"
+
+    [[ "$output" == *"max value = 26.00, index= 2"* ]]
 }
-@test "simple test" {
-    run ./demo1 <<EOF
-3
-1 -2 -9.2
-EOF
-    #Extract the line containing 'max value'
-    result_line=$(echo "$output" | grep "max value")
 
-    # Check that the line is exactly what we expect
-    [[ "$result_line" == "max value = 1, index=0"]]
+@test "max value at last index" {
+    run bash -c "printf '4\n5\n10\n20\n100\n' | ./demo1"
+
+    echo "$output"
+
+    [[ "$output" == *"max value = 100.00, index= 3"* ]]
 }
-@test "simple test"{
-    run ./demo1 <<EOF
-6
-3 5 1.4 24 99 45
-EOF
-    #Extract the line containing 'max value'
-    result_line=$(echo "$output" | grep "max value")
 
-    # Check that the line is exactly what we expect
-    [[ "$result_line" == "max value = 99, index=4"]]
+@test "decimal numbers" {
+    run bash -c "printf '4\n2.5\n7.8\n6.1\n3.4\n' | ./demo1"
+
+    echo "$output"
+    
+    [[ "$output" == *"max value = 7.80, index= 1"* ]]
 }
