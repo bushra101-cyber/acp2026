@@ -22,11 +22,13 @@ void calculate_area(int n, Rectangle rects[n])
 }
 int findLargestArea(int n, Rectangle rects[n])
 {
+    float maxArea = rects[0].area;
     int largestIndex = 0;
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i < n; i++)
     {
-        if (rects[i].area > largestIndex)
+        if (rects[i].area > maxArea)
         {
+            maxArea = rects[i].area;
             largestIndex = i;
         }
     }
