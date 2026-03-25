@@ -1,0 +1,21 @@
+Enter number of students: 
+Enter details for student 1:
+Roll No: Name: Marks: 
+Enter details for student 2:
+Roll No: Name: Marks: Data written to students.txt successfully!
+
+Original array:
+
+--- Student Records ---
+Roll No	Name		Marks
+------	----		-----
+   101	Alice          	85.50
+   102	Bob            	92.00
+
+Read from file array:
+
+--- Student Records ---
+Roll No	Name		Marks
+------	----		-----
+   101	Alice          	85.50
+   102	Bob            	92.00
